@@ -203,9 +203,12 @@ section#hero{
     }
 }
 
-@media(min-width: 801px) and (max-width: 1200px){
+@media(min-width: 801px) and (max-width: 1400px){
     .dropdown_menu{
         left: 2rem;
         width: unset;
+    }
+    .toggle_btn i{
+        display: none;
     }
 }
