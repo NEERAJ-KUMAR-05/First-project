@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    height: 110vh;
+    background-color: #000;
+    background-image: url("circle-ani.jpg");
+    background-size: cover;
+    background-position: center;
+
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+a:hover{
+    color: orange;
+    border-bottom: 1px solid orange;
+}
+
+
+/* ############   header  ################### */
+.header{
+    position: relative;
+    padding: 0 1rem;
+    /* background-color: #101a1f; */
+    max-width:100% ;
+    /* height: 15%; */
+}
+
+.navbar{
+    width: 95%;
+    height: 70px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo img{
+    margin: 0 1rem;
+    height: 4rem;
+    /* font-size: 1.9rem; */
+    /* letter-spacing: 0.2rem; */
+
+}
+.navbar .links {
+    letter-spacing: 0.15rem;
+    display: flex;
+    gap: 2rem;
+    text-transform: uppercase;
+    border-bottom: 1px sloid #fff;
+
+}
+.links a{
+    padding-bottom: 0.2rem;
+}
+
+.navbar .toggle_btn{
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: inline-block;
+    
+}
+.action_btn{
+    background-color: orange;
+    color:#fff;
+    letter-spacing: 0.05rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+
+.action_btn:hover{
+    scale: 1.05;
+    color: #fff;
+    background-color: rgb(255, 136, 0);
+
+
+}
+
+.action_btn:active{
+    scale: 0.95;
+    padding: 0.4rem 0.8rem;
+}
+
+/* ############ dropdown menu ############ */
+.dropdown_menu{
+    /* padding-left: 10rem; */
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 6opx;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+i:active{
+    color: orange;
+    padding: 0.4rem o.4rem;
+    size: 0.4rem o.4rem;
+}
+
+.dropdown_menu.open{
+    height: 240px;
+}
+
+.dropdown_menu li{
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+/* ######## hero ########## */
+section#hero{
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+#hero h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    /* text-transform: uppercase; */
+}
+#hero p{
+    text-transform: uppercase;
+}
+.footer{
+    color: #f4f4f4;
+    padding: 2rem;
+    text-align: center;
+}
+.social-media-links{
+    margin: 1rem;
+}
+.social-media-links .fab{
+    padding: 5px;
+}
+/* ########## responcive design ################# */
+/* @media(max-width: 992px){ */
+@media(max-width: 500px){
+    .navbar .links,
+    .navbar .action_btn{
+        display: none;
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+}
+@media(min-width: 501px) and (max-width: 800px){
+    .navbar .links,
+    .navbar .action_btn{
+        display: none;
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+}
+
+@media(min-width: 801px) and (max-width: 1200px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
